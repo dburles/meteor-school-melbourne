@@ -1,0 +1,16 @@
+body {
+  background: #28272C;
+  color: #F7F7F7;
+}
+
+label {
+  color: #F7F7F7 !important;
+}
+
+.title {
+  margin: 25px 0;
+}
+
+.divider {
+  color: #F7F7F7 !important;
+}

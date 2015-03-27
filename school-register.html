@@ -1,0 +1,49 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Register your interest for Melbourne Meteor School</title>
+</head>
+
+<body>
+  <div class="ui one column stackable centered aligned page grid" style="margin-top: 15px">
+    <div class="row">
+      <div class="column eight wide">
+        <img width="200" src="/meteor-logo-final-dark.png" alt="Meteor">
+        <p class="title">Register your interest in attending Melbourne Meteor School.</p>
+      
+        {{> quickForm collection="Registrations" id="register" type="insert" class="left" fields="name, email"}}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column eight wide">
+
+        <div class="ui horizontal divider">
+          {{#if Template.subscriptionsReady}}
+            {{registrations.count}} Attendees
+          {{else}}
+            Loading...
+          {{/if}}
+        </div>
+
+        {{#if registrations.count}}
+          <div class="ui divided items">
+            {{#each registrations}}
+              {{> member}}
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</body>
+
+<template name="member">
+  <div class="item">
+    <div class="ui tiny image">
+      <img src="{{gravatarUrl}}">
+    </div>
+    <div class="middle aligned content">
+      {{name}}
+    </div>
+  </div>
+</template>

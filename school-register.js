@@ -29,10 +29,6 @@ Registrations.allow({
 });
 
 if (Meteor.isClient) {
-  Meteor.Spinner.options = {
-    color: '#F7F7F7'
-  };
-
   Template.body.onCreated(function() {
     this.subscribe('registrations');
   });

@@ -26,7 +26,7 @@
         </div>
 
         {{#if registrations.count}}
-          <div class="ui divided items">
+          <div class="ui three column grid">
             {{#each registrations}}
               {{> member}}
             {{/each}}
@@ -38,12 +38,16 @@
 </body>
 
 <template name="member">
-  <div class="item">
-    <div class="ui tiny image">
-      <img src="{{gravatarUrl}}">
-    </div>
-    <div class="middle aligned content">
-      {{name}}
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <img src="{{gravatarUrl}}">
+      </div>
+      <div class="content">
+        <div class="description">
+          {{name}}
+        </div>
+      </div>
     </div>
   </div>
 </template>

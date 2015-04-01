@@ -41,7 +41,7 @@ if (Meteor.isClient) {
 
   Template.member.helpers({
     gravatarUrl: function() {
-      return this.gravatar && Gravatar.imageUrl(this.gravatar, { secure: true }) + '?d=mm';
+      return this.gravatar && Gravatar.imageUrl(this.gravatar, { secure: true }) + '?d=mm&s=200';
     }
   });
 }
